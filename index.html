@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amrit Mishra | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent1:#06b6d4;
+      --accent2:#3b82f6;
+      --accent3:#9333ea;
+      --glass: rgba(255,255,255,0.08);
+      --glass-strong: rgba(255,255,255,0.18);
+      --text:#ffffff;
+      --muted:#f1f5f9;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
+    html{scroll-behavior:smooth}
+    body{
+      min-height:100vh;
+      color:var(--text);
+      background: linear-gradient(120deg,var(--accent1) 0%,var(--accent2) 50%,var(--accent3) 100%);
+      overflow-x:hidden;
+    }
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:120;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:0.9rem 2rem;background:rgba(0,0,0,0.25);backdrop-filter:blur(8px);
+    }
+    header .brand{display:flex;align-items:center;gap:0.7rem}
+    header .brand h1{font-size:1.25rem;color:var(--muted);font-weight:700}
+    nav{display:flex;gap:1rem}
+    nav a{color:var(--muted);text-decoration:none;font-weight:500;padding:0.4rem 0.6rem;border-radius:8px;transition:all .18s}
+    nav a:hover{background:var(--accent1);color:#000}
+
+    /* Hero */
+    .hero{
+      min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+      padding:3rem 1rem;
+    }
+    .profile-img{
+      width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 8px 30px rgba(0,0,0,0.5)
+    }
+    .hero h2{margin-top:1rem;font-size:clamp(1.8rem,5vw,3rem);color:#fff}
+    .hero p{margin-top:0.8rem;color:#f8fafc;font-size:1.1rem;max-width:780px}
+    .hero .hero-actions{margin-top:1.2rem;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+    .btn{
+      display:inline-block;padding:0.7rem 1.2rem;border-radius:999px;
+      background:linear-gradient(45deg,var(--accent1),var(--accent2));
+      color:#000;font-weight:700;text-decoration:none;transition:all .2s;
+    }
+    .btn:hover{transform:scale(1.05);box-shadow:0 0 15px rgba(255,255,255,0.6)}
+
+    /* Sections */
+    section{padding:3.2rem 1.2rem;max-width:1100px;margin:0 auto}
+    h2.section-title{font-size:1.9rem;color:#fff;text-align:center;margin-bottom:1rem;position:relative}
+    h2.section-title::after{content:'';display:block;width:60px;height:3px;background:var(--accent1);margin:0.5rem auto;border-radius:2px}
+
+    /* Grid */
+    .grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:1.2rem}
+    .card{
+      background:var(--glass);padding:1.4rem;border-radius:15px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.35);transition:all .25s;
+    }
+    .card:hover{transform:translateY(-8px) scale(1.02);background:var(--glass-strong);box-shadow:0 0 15px rgba(255,255,255,0.4)}
+    .card i{font-size:1.8rem;margin-bottom:0.6rem;color:var(--accent1)}
+
+    /* Skills */
+    .skill-list{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:.8rem}
+    .skill-pill{padding:.45rem .9rem;border-radius:999px;font-weight:600;font-size:.95rem;color:#000;
+      background:linear-gradient(45deg,var(--accent1),var(--accent2));}
+
+    /* Contact */
+    .contact{display:flex;flex-direction:column;align-items:center;gap:.7rem}
+    .contact a{display:inline-flex;align-items:center;gap:.6rem;padding:.6rem 1rem;border-radius:12px;
+      background:rgba(255,255,255,0.07);text-decoration:none;color:var(--muted);transition:.2s}
+    .contact a:hover{background:linear-gradient(45deg,var(--accent2),var(--accent3));color:#000}
+    .contact a i{font-size:1.1rem}
+
+    /* Footer */
+    footer{text-align:center;padding:1.2rem;color:rgba(255,255,255,0.85);font-size:.95rem;margin-top:2rem}
+
+    @media (max-width:700px){
+      header{padding:0.7rem 1rem}
+      .hero{padding:2.4rem 1rem}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header data-aos="fade-down">
+    <div class="brand">
+      <img src="amritProfile.jpg" alt="Amrit Mishra" style="width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.4)">
+      <h1>Amrit Mishra</h1>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="amritProfile.jpg" alt="Amrit Mishra profile photo" class="profile-img" data-aos="zoom-in">
+    <h2 data-aos="fade-up">Hi, I'm Amrit Mishra 👋</h2>
+    <p data-aos="fade-up" data-aos-delay="120">
+      A BCA (3rd year) student from Ayodhya, passionate about Python Development, problem-solving,
+      and creative video editing. I aim to build impactful projects with clean and efficient code.
+    </p>
+    <div class="hero-actions" data-aos="fade-up" data-aos-delay="240">
+      <a class="btn" href="Amrit_Mishra_Resume.pdf" download>📄 Download CV</a>
+      <a class="btn" href="#projects">🚀 See My Projects</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" data-aos="fade-up">
+    <h2 class="section-title">About Me</h2>
+    <div class="card" style="text-align:center">
+      <p>
+        I'm <strong>Amrit Mishra</strong>, a BCA student currently learning advanced Python and
+        exploring full-stack development. With experience in CLI tools and games, I enjoy
+        solving coding challenges and continuously improving my skills.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" data-aos="fade-right">
+    <h2 class="section-title">Skills</h2>
+    <div class="card" style="text-align:center">
+      <div class="skill-list">
+        <span class="skill-pill">🐍 Python</span>
+        <span class="skill-pill">☕ Java</span>
+        <span class="skill-pill">🌐 HTML</span>
+        <span class="skill-pill">🎨 CSS</span>
+        <span class="skill-pill">📊 MS Office</span>
+        <span class="skill-pill">📝 LibreOffice</span>
+        <span class="skill-pill">🎥 Video Editing (CapCut, VN)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" data-aos="fade-left">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid">
+      <!-- Rock Paper Scissors -->
+      <div class="card">
+        <i class="fas fa-hand-rock"></i>
+        <h3>Rock-Paper-Scissor Game</h3>
+        <p>Interactive Python game against computer with random moves and score tracking.</p>
+        <a href="https://github.com/AmritMishra07" target="_blank">🔗 GitHub</a>
+      </div>
+
+      <!-- Task Manager -->
+      <div class="card">
+        <i class="fas fa-tasks"></i>
+        <h3>Task Manager (CLI)</h3>
+        <p>Python CLI tool to add, view, mark complete, and manage daily tasks easily.</p>
+        <a href="https://github.com/AmritMishra07" target="_blank">🔗 GitHub</a>
+      </div>
+
+      <!-- Rent Calculator -->
+      <div class="card">
+        <i class="fas fa-home"></i>
+        <h3>Rent Calculator</h3>
+        <p>Python program to fairly split rent among tenants with extra charges option.</p>
+        <a href="https://github.com/AmritMishra07" target="_blank">🔗 GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" data-aos="zoom-in">
+    <h2 class="section-title">Achievements</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🎓 Python Bootcamp (Udemy) — In Progress</h3>
+        <p>Comprehensive Python course covering Core Python, OOP, File Handling, and Flask basics. Certificate on completion.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" data-aos="fade-up">
+    <h2 class="section-title">Contact</h2>
+    <div class="card contact">
+      <a href="mailto:amritmishra1072@gmail.com"><i class="fas fa-envelope"></i> amritmishra1072@gmail.com</a>
+      <a href="tel:7307756693"><i class="fas fa-phone"></i> 7307756693</a>
+      <a href="https://github.com/AmritMishra07" target="_blank"><i class="fab fa-github"></i> github.com/AmritMishra07</a>
+      <a href="https://www.linkedin.com/in/amrit-mishra-4595a6345" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/amrit-mishra-4595a6345</a>
+      <a href="https://www.instagram.com/fitt.amrit" target="_blank"><i class="fab fa-instagram"></i> instagram.com/fitt.amrit</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> Amrit Mishra · Built with 💙</p>
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 900, once: true });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
