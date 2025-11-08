@@ -35,7 +35,6 @@
       overflow-x:hidden;
     }
 
-    /* Header */
     header{
       position:sticky;top:0;z-index:120;
       display:flex;align-items:center;justify-content:space-between;
@@ -47,7 +46,6 @@
     nav a{color:var(--muted);text-decoration:none;font-weight:500;padding:0.4rem 0.6rem;border-radius:8px;transition:all .18s}
     nav a:hover{background:var(--accent1);color:#000}
 
-    /* Hero */
     .hero{
       min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
       padding:3rem 1rem;
@@ -65,12 +63,10 @@
     }
     .btn:hover{transform:scale(1.05);box-shadow:0 0 15px rgba(255,255,255,0.6)}
 
-    /* Sections */
     section{padding:3.2rem 1.2rem;max-width:1100px;margin:0 auto}
     h2.section-title{font-size:1.9rem;color:#fff;text-align:center;margin-bottom:1rem;position:relative}
     h2.section-title::after{content:'';display:block;width:60px;height:3px;background:var(--accent1);margin:0.5rem auto;border-radius:2px}
 
-    /* Grid */
     .grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:1.2rem}
     .card{
       background:var(--glass);padding:1.4rem;border-radius:15px;
@@ -79,19 +75,16 @@
     .card:hover{transform:translateY(-8px) scale(1.02);background:var(--glass-strong);box-shadow:0 0 15px rgba(255,255,255,0.4)}
     .card i{font-size:1.8rem;margin-bottom:0.6rem;color:var(--accent1)}
 
-    /* Skills */
     .skill-list{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:.8rem}
     .skill-pill{padding:.45rem .9rem;border-radius:999px;font-weight:600;font-size:.95rem;color:#000;
       background:linear-gradient(45deg,var(--accent1),var(--accent2));}
 
-    /* Contact */
     .contact{display:flex;flex-direction:column;align-items:center;gap:.7rem}
     .contact a{display:inline-flex;align-items:center;gap:.6rem;padding:.6rem 1rem;border-radius:12px;
       background:rgba(255,255,255,0.07);text-decoration:none;color:var(--muted);transition:.2s}
     .contact a:hover{background:linear-gradient(45deg,var(--accent2),var(--accent3));color:#000}
     .contact a i{font-size:1.1rem}
 
-    /* Footer */
     footer{text-align:center;padding:1.2rem;color:rgba(255,255,255,0.85);font-size:.95rem;margin-top:2rem}
 
     @media (max-width:700px){
@@ -101,28 +94,27 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header data-aos="fade-down">
     <div class="brand">
       <img src="amritProfile.png" alt="Amrit Mishra" style="width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.4)">
       <h1>Amrit Mishra</h1>
     </div>
     <nav>
-      <a href="#about">About</a>
+      <a href="#objective">Objective</a>
       <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
       <a href="#projects">Projects</a>
       <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
     <img src="amritProfile.png" alt="Amrit Mishra profile photo" class="profile-img" data-aos="zoom-in">
     <h2 data-aos="fade-up">Hi, I'm Amrit Mishra 👋</h2>
     <p data-aos="fade-up" data-aos-delay="120">
-      A BCA (3rd year) student from Ayodhya, passionate about Python Development, problem-solving,
-      and creative video editing. I aim to build impactful projects with clean and efficient code.
+      A BCA (3rd year) student from Ayodhya, passionate about Data Analysis, Python, and visualization tools.
+      I aim to convert complex data into clear insights and support data-driven decision making.
     </p>
     <div class="hero-actions" data-aos="fade-up" data-aos-delay="240">
       <a class="btn" href="Amrit_Mishra_Resume.pdf" download>📄 Download CV</a>
@@ -130,14 +122,15 @@
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" data-aos="fade-up">
-    <h2 class="section-title">About Me</h2>
+  <!-- Career Objective -->
+  <section id="objective" data-aos="fade-up">
+    <h2 class="section-title">Career Objective</h2>
     <div class="card" style="text-align:center">
       <p>
-        I'm <strong>Amrit Mishra</strong>, a BCA student currently learning advanced Python and
-        exploring full-stack development. With experience in CLI tools and games, I enjoy
-        solving coding challenges and continuously improving my skills.
+        Detail-oriented <strong>Data Analyst</strong> passionate about transforming data into valuable insights.
+        Skilled in <strong>Python, Power BI, Excel,</strong> and <strong>SQL</strong> for data analysis, visualization, and reporting.
+        Eager to apply analytical and problem-solving skills to help organizations make data-driven decisions
+        and continuously grow in the field of data analytics.
       </p>
     </div>
   </section>
@@ -145,16 +138,44 @@
   <!-- Skills -->
   <section id="skills" data-aos="fade-right">
     <h2 class="section-title">Skills</h2>
-    <div class="card" style="text-align:center">
+    <div class="card">
+      <h3 style="text-align:center;">Programming</h3>
       <div class="skill-list">
         <span class="skill-pill">🐍 Python</span>
         <span class="skill-pill">☕ Java</span>
+      </div>
+
+      <h3 style="text-align:center;margin-top:1rem;">Web & Database</h3>
+      <div class="skill-list">
         <span class="skill-pill">🌐 HTML</span>
         <span class="skill-pill">🎨 CSS</span>
+        <span class="skill-pill">⚙️ Flask (Basics)</span>
+        <span class="skill-pill">🗄️ SQL</span>
+      </div>
+
+      <h3 style="text-align:center;margin-top:1rem;">Tools</h3>
+      <div class="skill-list">
+        <span class="skill-pill">💻 GitHub</span>
         <span class="skill-pill">📊 MS Office</span>
         <span class="skill-pill">📝 LibreOffice</span>
-        <span class="skill-pill">🎥 Video Editing (CapCut, VN)</span>
       </div>
+
+      <h3 style="text-align:center;margin-top:1rem;">Other</h3>
+      <div class="skill-list">
+        <span class="skill-pill">🐞 Debugging</span>
+        <span class="skill-pill">🎥 Video Editing</span>
+        <span class="skill-pill">🧩 Problem Solving</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" data-aos="fade-left">
+    <h2 class="section-title">Education</h2>
+    <div class="card" style="text-align:center">
+      <p><strong>Bachelor of Computer Applications (BCA)</strong><br>
+      Dr. Ram Manohar Lohia Avadh University, Ayodhya<br>
+      <em>2022 – 2025 | Pursuing (3rd Year)</em></p>
     </div>
   </section>
 
@@ -162,7 +183,6 @@
   <section id="projects" data-aos="fade-left">
     <h2 class="section-title">Projects</h2>
     <div class="grid">
-      <!-- Rock Paper Scissors -->
       <div class="card">
         <i class="fas fa-hand-rock"></i>
         <h3>Rock-Paper-Scissor Game</h3>
@@ -170,7 +190,6 @@
         <a href="https://github.com/AmritMishra07" target="_blank">🔗 GitHub</a>
       </div>
 
-      <!-- Task Manager -->
       <div class="card">
         <i class="fas fa-tasks"></i>
         <h3>Task Manager (CLI)</h3>
@@ -178,7 +197,6 @@
         <a href="https://github.com/AmritMishra07" target="_blank">🔗 GitHub</a>
       </div>
 
-      <!-- Rent Calculator -->
       <div class="card">
         <i class="fas fa-home"></i>
         <h3>Rent Calculator</h3>
@@ -189,22 +207,19 @@
   </section>
 
   <!-- Achievements -->
-  <!-- Achievements -->
-<section id="achievements" data-aos="zoom-in">
-  <h2 class="section-title">Achievements</h2>
-  <div class="grid">
-    <!-- Python Bootcamp -->
-    <div class="card">
-      <h3>🎓 Python Bootcamp (Udemy) — Completed</h3>
-      <p>
-        Successfully completed the <strong>Complete 2025 Python Bootcamp: Learn Python from Scratch</strong> 
-        instructed by <strong>Haris Ali Khan</strong>. Covered core Python, OOP, file handling, and Flask basics.
-      </p>
-      <a class="btn" href="certi.jpg" target="_blank">📜 View Certificate</a>
+  <section id="achievements" data-aos="zoom-in">
+    <h2 class="section-title">Achievements</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🎓 Python Bootcamp (Udemy) — Completed</h3>
+        <p>
+          Successfully completed the <strong>Complete 2025 Python Bootcamp: Learn Python from Scratch</strong> 
+          instructed by <strong>Haris Ali Khan</strong>. Covered core Python, OOP, file handling, and Flask basics.
+        </p>
+        <a class="btn" href="certi.jpg" target="_blank">📜 View Certificate</a>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Contact -->
   <section id="contact" data-aos="fade-up">
@@ -218,12 +233,10 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© <span id="year"></span> Amrit Mishra · Built with 💙</p>
   </footer>
 
-  <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 900, once: true });
@@ -231,4 +244,3 @@
   </script>
 </body>
 </html>
-
