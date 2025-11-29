@@ -75,15 +75,15 @@
     }
     .card-custom:hover{transform:translateY(-8px) scale(1.02);background:var(--glass-strong);box-shadow:0 0 15px rgba(255,255,255,0.4)}
 
-    .skill-list{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:.8rem}
-    .skill-pill{padding:.45rem .9rem;border-radius:999px;font-weight:600;font-size:.95rem;color:#000;
-      background:linear-gradient(45deg,var(--accent1),var(--accent2));}
-
     .contact a{display:inline-flex;align-items:center;gap:.6rem;padding:.6rem 1rem;border-radius:12px;
       background:rgba(255,255,255,0.07);text-decoration:none;color:var(--muted);transition:.2s}
     .contact a:hover{background:linear-gradient(45deg,var(--accent2),var(--accent3));color:#000}
 
     footer{text-align:center;padding:1.2rem;color:rgba(255,255,255,0.85);font-size:.95rem;margin-top:2rem}
+
+    .skill-list{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:.8rem}
+    .skill-pill{padding:.45rem .9rem;border-radius:999px;font-weight:600;font-size:.95rem;color:#000;
+      background:linear-gradient(45deg,var(--accent1),var(--accent2));}
 
     @media (max-width:700px){
       header{padding:0.7rem 1rem}
@@ -93,6 +93,8 @@
 </head>
 
 <body>
+
+  <!-- Header -->
   <header data-aos="fade-down">
     <div class="brand">
       <img src="amritProfile.png" alt="Amrit Mishra" style="width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.4)">
@@ -107,42 +109,43 @@
     </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero text-center">
     <img src="amritProfile.png" alt="Amrit Mishra profile photo" class="profile-img" data-aos="zoom-in">
     <h2 data-aos="fade-up">Hi, I'm Amrit Mishra 👋</h2>
     <p data-aos="fade-up" data-aos-delay="120">
       A BCA (3rd year) student from Ayodhya, passionate about <strong>Data Analytics</strong> and tools like 
-      <strong>Python, Power BI, Excel, and SQL</strong>. I love turning raw data into actionable insights to support 
-      data-driven decisions.
+      <strong>Python, Power BI, Excel, and SQL</strong>.
     </p>
+
     <div class="hero-actions" data-aos="fade-up" data-aos-delay="240">
       <a class="btn-custom" href="Amrit_Mishra_Resume.pdf" download>📄 Download CV</a>
       <a class="btn-custom" href="#projects">🚀 See My Projects</a>
     </div>
   </section>
 
-  <!-- Career Objective -->
+  <!-- OBJECTIVE -->
   <section id="objective" data-aos="fade-up">
     <h2 class="section-title">Career Objective</h2>
     <div class="card-custom text-center">
       <p>
-        Detail-oriented <strong>Data Analyst</strong> passionate about transforming data into valuable insights.
-        Skilled in <strong>Python, Power BI, Excel,</strong> and <strong>SQL</strong> for data analysis, visualization, 
-        and reporting. Eager to apply analytical and problem-solving skills to help organizations make 
-        data-driven decisions and continuously grow in the field of data analytics.
+        Detail-oriented <strong>Data Analyst</strong>, skilled in Python, SQL, Power BI & Excel.
       </p>
     </div>
   </section>
 
-  <!-- Skills -->
+  <!-- SKILLS -->
   <section id="skills" data-aos="fade-right">
     <h2 class="section-title">Skills</h2>
     <div class="card-custom">
+      
       <h3 class="text-center">Programming & Analysis</h3>
       <div class="skill-list">
         <span class="skill-pill">🐍 Python</span>
         <span class="skill-pill">📊 Pandas</span>
         <span class="skill-pill">📈 NumPy</span>
+        <span class="skill-pill">🟥 Streamlit</span>
+        
       </div>
 
       <h3 class="text-center mt-4">Data Tools</h3>
@@ -166,6 +169,7 @@
         <span class="skill-pill">🧩 Problem Solving</span>
         <span class="skill-pill">🐞 Debugging</span>
       </div>
+
     </div>
   </section>
 
@@ -173,51 +177,71 @@
   <section id="education" data-aos="fade-left">
     <h2 class="section-title">Education</h2>
     <div class="card-custom text-center">
-      <p><strong>Bachelor of Computer Applications (BCA)</strong><br>
-      Dr. Ram Manohar Lohia Avadh University, Ayodhya<br>
-      <em>2023 – 2026 | Pursuing (3rd Year)</em></p>
+      <p><strong>BCA (3rd Year)</strong><br>
+      Dr. Ram Manohar Lohia Avadh University, Ayodhya</p>
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- PROJECTS UPDATED -->
   <section id="projects" data-aos="fade-up">
     <h2 class="section-title">Projects</h2>
+
     <div class="row g-4">
+
+      <!-- Rock Paper Scissor -->
       <div class="col-md-4">
         <div class="card-custom text-center h-100">
           <i class="fas fa-hand-rock fa-2x mb-2 text-info"></i>
           <h4>Rock Paper Scissor Game</h4>
-          <p>Interactive Python game against computer with random moves and score tracking.</p>
+          <p>Fun Python game with random moves & score tracking.</p>
           <a href="https://github.com/AmritMishra07" target="_blank" class="btn-custom mt-2">🔗 GitHub</a>
         </div>
       </div>
+
+      <!-- Task Manager -->
       <div class="col-md-4">
         <div class="card-custom text-center h-100">
           <i class="fas fa-tasks fa-2x mb-2 text-info"></i>
           <h4>Task Manager (CLI)</h4>
-          <p>Python CLI tool to add, view, and manage daily tasks efficiently.</p>
+          <p>Python CLI tool to manage tasks using simple commands.</p>
           <a href="https://github.com/AmritMishra07" target="_blank" class="btn-custom mt-2">🔗 GitHub</a>
         </div>
       </div>
+
+      <!-- Student Grade -->
       <div class="col-md-4">
         <div class="card-custom text-center h-100">
           <i class="fas fa-database fa-2x mb-2 text-info"></i>
-          <h4>Student Grade Management System</h4>
-          <p>Console app to add, update, and manage student grades using Python.</p>
+          <h4>Student Grade Management</h4>
+          <p>Console app for adding & updating student grades.</p>
           <a href="https://github.com/AmritMishra07" target="_blank" class="btn-custom mt-2">🔗 GitHub</a>
         </div>
       </div>
+
+      <!-- ⭐ NEW — Student Enquiry Web App -->
+      <div class="col-md-4">
+        <div class="card-custom text-center h-100">
+          <i class="fas fa-file-code fa-2x mb-2 text-info"></i>
+          <h4>Student Enquiry Web App</h4>
+          <p>Streamlit-based enquiry form with auto PDF receipt generation.</p>
+          <p><strong>Tech Used:</strong> Python, Streamlit, ReportLab</p>
+          <p><strong>Features:</strong> Form input, PDF download, clean UI</p>
+          <a href="https://github.com/AmritMishra07/Student_enquiry-web" 
+             target="_blank" class="btn-custom mt-2">🔗 GitHub</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section id="contact" data-aos="fade-up">
     <h2 class="section-title">Contact</h2>
     <div class="card-custom contact text-center">
       <a href="mailto:amritmishra1072@gmail.com"><i class="fas fa-envelope"></i> amritmishra1072@gmail.com</a>
       <a href="tel:7307756693"><i class="fas fa-phone"></i> 7307756693</a>
       <a href="https://github.com/AmritMishra07" target="_blank"><i class="fab fa-github"></i> github.com/AmritMishra07</a>
-      <a href="https://www.linkedin.com/in/amrit-mishra-4595a6345" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/amrit-mishra-4595a6345</a>
+      <a href="https://www.linkedin.com/in/amrit-mishra-4595a6345" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/amrit</a>
     </div>
   </section>
 
@@ -225,12 +249,12 @@
     <p>© <span id="year"></span> Amrit Mishra · Built with 💙</p>
   </footer>
 
-  <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 900, once: true });
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
